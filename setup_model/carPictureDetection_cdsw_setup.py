@@ -33,7 +33,7 @@ USERNAME = 'admin'
 FULL_NAME = 'Workshop Admin'
 EMAIL = 'admin@cloudera.com'
 
-_MODEL_NAME = 'Car Picture Detection'
+_MODEL_NAME = 'Car Picture Detect'
 
 _CDSW_SESSION = requests.Session()
 _RELEASE = []
