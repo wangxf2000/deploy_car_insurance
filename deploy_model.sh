@@ -29,6 +29,20 @@ PUBLIC_IP=$(curl -s http://ifconfig.me || curl -s http://api.ipify.org/)
 
 
 source /opt/rh/rh-python36/enable
+echo "--install dependencies"
+  pip install --quiet --upgrade pip
+  pip install --progress-bar off \
+    cm-client==44.0.3 \
+    impyla==0.17.0 \
+    Jinja2==3.0.3 \
+    kerberos==1.3.1 \
+    nipyapi==0.17.1 \
+    paho-mqtt==1.6.1 \
+    psycopg2-binary==2.9.2 \
+    pytest==6.2.5 \
+    PyYAML==6.0 \
+    requests-gssapi==1.2.3 \
+    thrift-sasl==0.4.3
 
 echo "--deploy the cdsw project and models"
 echo "--deploy carPictureDetection_cdsw_setup..."
