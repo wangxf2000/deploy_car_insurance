@@ -37,18 +37,16 @@ partition by hash partitions 4
 stored as kudu;
 
 CREATE TABLE IF NOT EXISTS car_insurance.claims ( 
-claim_id BIGINT NOT NULL, 
-time timestamp NOT NULL, 
-severity STRING NOT NULL, 
-customer_id BIGINT NOT NULL, 
-car_plate_no STRING NOT NULL,
-picture_path STRING NOT NULL,
-PRIMARY KEY (claim_id))
+claimId BIGINT NOT NULL,
+carImageBased64encoding  STRING NOT NULL,
+clainDate timestamp NOT NULL, 
+isDamaged STRING NOT NULL, 
+localization STRING NOT NULL, 
+severity STRING NOT NULL,
+PRIMARY KEY (claimId))
 partition by hash partitions 4
 stored as kudu;
 
 insert into car_insurance.customers
 select customer_id,car_plate_no,first_name,last_name,city,email,car_type from default.customers;
 
-insert into car_insurance.claims
-select claim_id,date_time,severity,customer_id,car_plate_no,'' from default.claims;
