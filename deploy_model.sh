@@ -60,3 +60,4 @@ python -u setup_model/carDamageSeverity_cdsw_setup.py $PUBLIC_IP ${BASE_DIR}/car
 echo "--deploy carDamageSeverity_cdsw_setup completely"
 echo "--Deploy all cdsw models completely"
 
+
