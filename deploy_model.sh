@@ -6,6 +6,7 @@ set -e
 set -u
 
 echo "-- install dependency packages"
+yum -y remove epel-release
 yum install -y centos-release-scl epel-release
 yum install -y rh-python36 python-pip
 pip install requests
