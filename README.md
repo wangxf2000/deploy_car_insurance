@@ -13,6 +13,7 @@ sed -i "s/supersecret1/YourPassword/" deploy_model.sh
 
 #### deploy the model and data
 ```
+sh prepare.sh
 sh deploy_model.sh
 sh deploy_data.sh
 ```
