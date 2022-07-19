@@ -13,11 +13,21 @@ pip install --upgrade pip==19.3
 pip install requests
 BASE_DIR="/tmp/resource"
 
+##check ${BASE_DIR} directory exists
 echo "--Download the models to ${BASE_DIR}"
-##Download four models
-if [ -d "${BASE_DIR}" ]; then
+
+if [ -f "${BASE_DIR}" ] then
+  echo "${BASE_DIR} is a file,drop and create it as directory"
+  rm -rf ${BASE_DIR}
   mkdir -p ${BASE_DIR}
+elif [ ! -d "${BASE_DIR}" ] then
+  echo "${BASE_DIR} directory does not exist,create it"
+  mkdir -p ${BASE_DIR}
+else
+   echo "${BASE_DIR} exists, skip it"  
 fi
+
+##Download four models
 git clone https://github.com/bguedes/carDetectionPredictionML
 git clone https://github.com/bguedes/carDamagePredictionML
 git clone https://github.com/bguedes/carDamageLocalizationPredictionML
