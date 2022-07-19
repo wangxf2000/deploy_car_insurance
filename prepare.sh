@@ -22,11 +22,11 @@ git clone https://github.com/bguedes/carDetectionPredictionML
 git clone https://github.com/bguedes/carDamagePredictionML
 git clone https://github.com/bguedes/carDamageLocalizationPredictionML
 git clone https://github.com/bguedes/carDamageSeverityPredictionML
-cp carDetectionPredictionML/models/car_model_cat_list.pk  ${BASE_DIR} 
-cp carDamagePredictionML/models/carDamagePredictionModel.h5   ${BASE_DIR}
-cp carDamageLocalizationPredictionML/models/carDamageLocalizationPredictionModel.h5  ${BASE_DIR}
-cp carDamageSeverityPredictionML/models/carDamageSeverityPredictionModel.h5  ${BASE_DIR}
-#wget https://github.com/bguedes/carDetectionPredictionML/blob/main/models/car_model_cat_list.pk -P ${BASE_DIR} 
+cp carDetectionPredictionML/models/car_model_cat_list.pk  ${BASE_DIR}/car_model_cat_list.pk 
+cp carDamagePredictionML/models/carDamagePredictionModel.h5   ${BASE_DIR}/carDamagePredictionModel.h5 
+cp carDamageLocalizationPredictionML/models/carDamageLocalizationPredictionModel.h5  ${BASE_DIR}/carDamageLocalizationPredictionModel.h5
+cp carDamageSeverityPredictionML/models/carDamageSeverityPredictionModel.h5  ${BASE_DIR}/carDamageSeverityPredictionModel.h5
+#wget https://github.com/bguedes/carDetectionPredictionML/blob/main/models/car_model_cat_list.pk -P ${BASE_DIR}
 #wget https://github.com/bguedes/carDamagePredictionML/blob/main/models/carDamagePredictionModel.h5  -P ${BASE_DIR}
 #wget https://github.com/bguedes/carDamageLocalizationPredictionML/blob/main/models/carDamageLocalizationPredictionModel.h5 -P ${BASE_DIR}
 #wget https://github.com/bguedes/carDamageSeverityPredictionML/blob/main/models/carDamageSeverityPredictionModel.h5 -P ${BASE_DIR}
