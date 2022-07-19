@@ -16,11 +16,11 @@ BASE_DIR="/tmp/resource"
 ##check ${BASE_DIR} directory exists
 echo "--Download the models to ${BASE_DIR}"
 
-if [ -f "${BASE_DIR}" ] then
+if [ -f "${BASE_DIR}" ]; then
   echo "${BASE_DIR} is a file,drop and create it as directory"
   rm -rf ${BASE_DIR}
   mkdir -p ${BASE_DIR}
-elif [ ! -d "${BASE_DIR}" ] then
+elif [ ! -d "${BASE_DIR}" ]; then
   echo "${BASE_DIR} directory does not exist,create it"
   mkdir -p ${BASE_DIR}
 else
