@@ -9,6 +9,7 @@ echo "-- install dependency packages"
 yum -y remove epel-release
 yum install -y centos-release-scl epel-release
 yum install -y rh-python36 python-pip
+pip install --upgrade pip==19.3
 pip install requests
 BASE_DIR="/tmp/resource"
 
